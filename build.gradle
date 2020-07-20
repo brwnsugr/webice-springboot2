@@ -1,0 +1,31 @@
+buildscript{
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    repositories { // 레포지토리는 각종 의존성(라이브러리) 들을 어던 원격 저장소에서 받을지를 결정한다.
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+group 'com.brwnsugr.himerej'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies { // 프로젝트 개발에 필요한 의존성 들을 선언함
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

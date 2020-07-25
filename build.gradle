@@ -32,5 +32,6 @@ dependencies { // 프로젝트 개발에 필요한 의존성 들을 선언함
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     compile 'com.h2database:h2'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
+    compile 'org.springframework.boot:spring-boot-starter-mustache'
 //    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
